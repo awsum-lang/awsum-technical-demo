@@ -31,10 +31,15 @@ awsum run --program-type cli -t js   recursion-and-memory-safety/Main.aww
 
 Allow each command a few seconds to finish. Expected stdout on every target: `100000` (no trailing newline).
 
-What it shows:
+What it demonstrates:
 
 - **Stack-safe recursion of any shape, without user-facing annotations.** Self, non-tail (the `mirror` body has two recursive calls), and three-function mutual (`deepestLeftA`/`B`/`C`) all run in bounded stack on every target — including JVM and JS, where no native cross-method TCO exists. No `tailRecM`, no manual CPS, no `@tailrec`.
 - **Memory safety without a GC opt-in.** LLVM and WASM use compiler-emitted reference counting (on macOS, `leaks --atExit -- awsum run --program-type cli -t llvm recursion-and-memory-safety/Main.aww` verifies zero leaks under the `mirrorN 500` allocation pressure). JVM, CLR, and JS use the host GC. The `.aww` source has no lifetime annotations either way.
+
+See also:
+
+- [Human-readable snapshots](https://github.com/awsum-lang/awsum/tree/main/.snapshots/successful/recursion-and-memory-safety/compiler) of what this program compiles into, per target
+- [How other languages run a program exactly like this](https://github.com/awsum-lang/language-comparison/tree/main/recursion-and-memory-safety): Haskell does, others crash at runtime
 
 ## AI use
 
