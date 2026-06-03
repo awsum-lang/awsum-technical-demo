@@ -62,7 +62,7 @@ jobs:
 
     env:
       # Compiler version downloaded from awsum-lang/awsum GitHub Releases.
-      AWSUM_VERSION: 0.0.5
+      AWSUM_VERSION: 0.0.6
 
     defaults:
       run:
