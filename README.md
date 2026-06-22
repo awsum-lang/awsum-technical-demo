@@ -38,8 +38,10 @@ What it demonstrates:
 
 See also:
 
-- [Human-readable snapshots](https://github.com/awsum-lang/awsum/tree/main/.snapshots/successful/recursion-and-memory-safety/compiler) of what this program compiles into, per target
-- [How other languages run a program exactly like this](https://github.com/awsum-lang/language-comparison/tree/main/recursion-and-memory-safety): Haskell does, others crash at runtime
+- Human-readable snapshots of what this program compiles into, per target: [LLVM](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.posix.ll), [JVM](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.j), [CLR](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.il), [WASM](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.wat), [JS](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.js)
+- [How safe is recursion in other languages](https://github.com/awsum-lang/language-comparison/tree/v0.0.7/stack-safe-recursion):
+  - In Awsum and Haskell, recursion is stack-safe;
+  - C#, Elm, F#, Go, Java, Koka, OCaml, PureScript, Roc, Rust, Scala, TypeScript, and Zig all overflow the stack and crash at runtime. Don't believe it? Every example is runnable, see for yourself.
 
 ## AI use
 

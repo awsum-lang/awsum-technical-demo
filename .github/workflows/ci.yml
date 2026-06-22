@@ -62,14 +62,14 @@ jobs:
 
     env:
       # Compiler version downloaded from awsum-lang/awsum GitHub Releases.
-      AWSUM_VERSION: 0.0.6
+      AWSUM_VERSION: 0.0.7
 
     defaults:
       run:
         shell: bash
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       # The LLVM backend pipes generated `.ll` through `clang`, which must be
       # LLVM 15+ for opaque pointers. Per-OS install mechanisms mirror
