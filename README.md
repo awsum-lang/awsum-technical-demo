@@ -38,14 +38,14 @@ What it demonstrates:
 
 See also:
 
-- Human-readable snapshots of what this program compiles into, per target: [LLVM](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.posix.ll), [JVM](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.j), [CLR](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.il), [WASM](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.wat), [JS](https://github.com/awsum-lang/awsum/blob/v0.0.7/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.js)
-- [How safe is recursion in other languages](https://github.com/awsum-lang/language-comparison/tree/v0.0.7/stack-safe-recursion):
+- Human-readable snapshots of what this program compiles into — from the compiler's benchmark copy, which differs only in running a deeper tree with fewer mirrors — per target: [LLVM](https://github.com/awsum-lang/awsum/blob/v0.0.8/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.posix.ll), [JVM](https://github.com/awsum-lang/awsum/blob/v0.0.8/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.j), [CLR](https://github.com/awsum-lang/awsum/blob/v0.0.8/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.il), [WASM](https://github.com/awsum-lang/awsum/blob/v0.0.8/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.wat), [JS](https://github.com/awsum-lang/awsum/blob/v0.0.8/.snapshots/benchmark/recursion-and-memory-safety/compiler/compiled.js)
+- [How safe is recursion in other languages](https://github.com/awsum-lang/language-comparison/tree/v0.0.8/stack-safe-recursion):
   - In Awsum and Haskell, recursion is stack-safe;
   - C#, Elm, F#, Go, Java, Koka, OCaml, PureScript, Roc, Rust, Scala, TypeScript, and Zig all overflow the stack and crash at runtime. Don't believe it? Every example is runnable, see for yourself.
 
 ## AI use
 
-This demo is developed with substantial usage of generative AI. Every generated change is reviewed, edited, and accepted by a human before it lands in the repository, and no output is shipped unedited.
+This demo is developed with substantial usage of generative AI.
 
 ## License
 
