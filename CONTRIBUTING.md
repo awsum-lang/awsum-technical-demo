@@ -12,7 +12,7 @@ just test      # run every demo through llvm / jvm / clr / wasm / js, assert exp
 just fix       # format + test
 ```
 
-`just test` requires the same five target runtimes that the Awsum compiler's CI uses — LLVM 15 (`clang`), JDK 11, .NET 9, `wasmtime`, Node 22. See [.github/workflows/ci.yml](.github/workflows/ci.yml) for the matching install scripts.
+`just test` requires the same five target runtimes that the Awsum compiler's CI uses — LLVM 15 (`clang`), JDK 25, .NET 10, `wasmtime`, Node 26. See [.github/workflows/ci.yml](.github/workflows/ci.yml) for the matching install scripts.
 
 ## Developer Certificate of Origin
 

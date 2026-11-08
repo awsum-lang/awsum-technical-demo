@@ -14,3 +14,7 @@ Until `awsum 1.0.0`, the project does not follow SemVer — every release increm
 
 - Initial release. `recursion-and-memory-safety/` demo — builds an immutable tree of depth 100,000, mirrors it 500 times (multi-child non-tail recursion and heavy allocation pressure), walks the deepest left path via three-function mutual tail recursion. CI runs the demo through every target (`llvm`, `jvm`, `clr`, `wasm`, `js`) on every supported host OS and asserts the expected stdout.
 - `just format` / `just test` / `just fix` / `just release` recipes for local development, mirroring the other `awsum-lang/*` repos.
+
+### Changed
+
+- CI runs the demo on the runtimes `awsum` 0.0.8 targets: Java 25, .NET 10, Node.js 26 (previously Java 11, .NET 9, Node.js 22). `actions/setup-java` and `actions/setup-dotnet` v5 → v6, `actions/setup-node` v6 → v7. Every GitHub Action is pinned to the commit SHA of a release at least 7 days old, and the runtimes to exact versions (Temurin 25.0.5, .NET SDK 10.0.403, Node.js 26.13.0, wasmtime 50.0.1).
